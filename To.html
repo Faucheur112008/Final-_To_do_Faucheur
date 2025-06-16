@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List Avancée</title>
+  <link rel="stylesheet" href="To.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Ma To-Do List</h1>
+      <input type="text" id="search" placeholder="🔍 Rechercher une tâche..." />
+    </header>
+
+    <form id="taskForm">
+      <input type="text" id="taskName" placeholder="Nom de la tâche" required />
+      <input type="date" id="taskDate" required />
+      <select id="taskPriority" required>
+        <option value="">Priorité</option>
+        <option value="faible">Faible</option>
+        <option value="moyenne">Moyenne</option>
+        <option value="élevée">Élevée</option>
+      </select>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <main>
+      <section id="faible" class="task-block">
+        <h2>Priorité Faible</h2>
+        <ul class="task-list"></ul>
+        <button class="toggle-btn">Voir tout</button>
+      </section>
+
+      <section id="moyenne" class="task-block">
+        <h2>Priorité Moyenne</h2>
+        <ul class="task-list"></ul>
+        <button class="toggle-btn">Voir tout</button>
+      </section>
+
+      <section id="élevée" class="task-block">
+        <h2>Priorité Élevée</h2>
+        <ul class="task-list"></ul>
+        <button class="toggle-btn">Voir tout</button>
+      </section>
+
+      <section id="archive" class="task-block archive">
+        <h2>🗃️ Archives</h2>
+        <ul class="task-list"></ul>
+        <button class="toggle-btn">Voir tout</button>
+      </section>
+    </main>
+
+    <footer class="actions-bar">
+      <button id="deleteSelected">🗑️ Supprimer</button>
+      <button id="archiveSelected">📥 Archiver</button>
+      <button id="unarchiveSelected">📤 Désarchiver</button>
+    </footer>
+  </div>
+
+  <script src="To.js"></script>
+</body>
+</html>
